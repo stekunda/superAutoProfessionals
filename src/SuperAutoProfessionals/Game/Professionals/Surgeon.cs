@@ -1,5 +1,6 @@
-// 8. Friend spawned gets +2/+3
 namespace SuperAutoProfessionals;
+
+// 8. Friend spawned gets +2/+3
 public class Surgeon : Professional
 {
     public override string CodeName => "Su";
@@ -15,9 +16,10 @@ public class Surgeon : Professional
                 Log($"Buffing {friend} attack by 2 and health by 3");
                 friend.Attack += 2;
                 friend.Health += 3;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 }

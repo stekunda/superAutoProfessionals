@@ -1,6 +1,7 @@
+namespace SuperAutoProfessionals;
+
 // My own idea #2
 // Before each attack, gain attack points equal to half of the enemy's health.
-namespace SuperAutoProfessionals;
 public class Athlete : Professional
 {
     public override string CodeName => "At";
@@ -18,7 +19,7 @@ public class Athlete : Professional
         var enemy = EnemyTeam.First;
         if (enemy == null) return false;
 
-        attackBonus += enemy.Health / 2;
+        attackBonus = enemy.Health / 2;
         p.Attack += attackBonus;
 
 

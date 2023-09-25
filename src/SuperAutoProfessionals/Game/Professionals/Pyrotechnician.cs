@@ -1,6 +1,6 @@
-// 1. Do 2 damage to everyone when it dies
 namespace SuperAutoProfessionals;
 
+// 1. Do 2 damage to everyone when it dies
 public class Pyrotechnician : Professional
 {
     public override string CodeName => "Py";

@@ -1,6 +1,6 @@
-// 2. Gains 5 attack points after each attack.
 namespace SuperAutoProfessionals;
 
+// 2. Gains 5 attack points after each attack.
 public class Boxer : Professional
 {
     public override string CodeName => "Bo";
@@ -16,8 +16,7 @@ public class Boxer : Professional
         var p = e.Professional!;
         if (p != this) return false;
 
-        attackBonus += 5;
-        p.Attack += attackBonus;
+        p.Attack += 5;
 
         var enemy = EnemyTeam.First;
         if (enemy == null) return false;

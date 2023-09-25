@@ -1,7 +1,8 @@
-// My own idea #1
-// 2. Gains double attack points after each attack.
+
 namespace SuperAutoProfessionals;
 
+// My own idea #1
+// 2. Gains double attack points after each attack.
 public class Coder : Professional
 {
     public override string CodeName => "Pr";
