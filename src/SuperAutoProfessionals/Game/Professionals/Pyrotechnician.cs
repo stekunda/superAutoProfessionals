@@ -10,7 +10,7 @@ public class Pyrotechnician : Professional
         base.On(e);
         if (e.Code == EventCode.Die)
         {
-            EnemyTeam.ForEach(enemy =>
+            Team.ForEach(enemy =>
             {
                 Log($"Dealing 2 damage to {enemy}");
                 Game.Attack(enemy, 2);
