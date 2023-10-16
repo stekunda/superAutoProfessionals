@@ -5,7 +5,7 @@ namespace SuperAutoProfessionals;
 // 2. Gains double attack points after each attack.
 public class Coder : Professional
 {
-    public override string CodeName => "Pr";
+    public override string CodeName => "Co";
 
     internal override bool On(Event e)
     {
