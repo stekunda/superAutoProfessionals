@@ -183,19 +183,24 @@ internal class Program
 	}
 	static Professional? CreateProfessionalByCodeName(string codeName)
 	{
-		return codeName switch
+		switch (codeName)
 		{
-			"At" => new Athlete(),
-			"Bo" => new Boxer(),
-			"Bu" => new Buthcer(),
-			"GD" => new GraveDigger(),
-			"Nu" => new Nurse(),
-			"Co" => new Coder(),
-			"Py" => new Pyrotechnician(),
-			"Su" => new Surgeon(),
-			"Tr" => new Trainer(),
-			"-" => null,
-			_ => throw new ArgumentException("Unknown code name"),
+			case "At": return new Athlete();
+			case "Bo": return new Boxer();
+			case "Bu": return new Buthcer();
+			case "GD": return new GraveDigger();
+			case "Nu": return new Nurse();
+			case "Co": return new Coder();
+			case "Py": return new Pyrotechnician();
+			case "Su": return new Surgeon();
+			case "Tr": return new Trainer();
+			case "-": return null;
+			default:
+				Console.WriteLine("Invalid code name");
+				Console.WriteLine("Enter a valid code name: ");
+				codeName = Console.ReadLine();
+				return CreateProfessionalByCodeName(codeName);
+
 		};
 	}
 }
